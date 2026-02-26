@@ -1,0 +1,10 @@
+[project]
+name = "doxygenai"
+version = "0.1.0"
+dependencies = [
+    "crewai",
+    "openai"
+]
+
+[tool.crewai]
+type = "crew"
