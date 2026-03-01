@@ -13,7 +13,7 @@ class LanguageDetector(Agent):
         "e la presenza di build/test/deploy script."
     )
     backstory: str = "Agente specializzato nell'analisi strutturale di progetti software."
-    allow_llm: bool = True
+    allow_llm: bool = False
 
     async def run(self, task: Task):
         logger.info(">>> LanguageDetector.run chiamato!")
