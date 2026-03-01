@@ -1,0 +1,4 @@
+test_agent:
+  role: "Test"
+  goal: "Test deploy"
+  backstory: "Minimal agent"
