@@ -25,6 +25,7 @@ for var in required_env:
 # Import moduli con gestione errori
 try:
     from crewai import Crew
+    from crewai_enterprise.api.crew_base import CrewBase  # <- import corretto per Enterprise
     from agents.LanguageDetector import LanguageDetector
     logger.info("LanguageDetector importato correttamente")
     print("LanguageDetector importato correttamente")
@@ -43,7 +44,8 @@ except Exception as e:
     logger.exception("Errore durante l'istanza di LanguageDetector")
     raise
 
-# Classe Crew pronta per CrewAI moderno
+# Classe Crew annotata con @CrewBase per Enterprise
+@CrewBase
 class DoxygenCrew(Crew):
     def __init__(self):
         super().__init__(
