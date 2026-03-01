@@ -1,7 +1,7 @@
 from crewai import Crew, Task
 from doxygen_ai.agents.TestAgent import TestAgent
 
-class DoxygenCrew(Crew):
+class DoxygenAiCrew(Crew):
     def __init__(self):
         agent = TestAgent()
 
