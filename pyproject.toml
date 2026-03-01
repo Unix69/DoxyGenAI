@@ -1,12 +1,13 @@
-[tool.poetry]
+[project]
 name = "doxygen_ai"
 version = "0.1.0"
-description = "Crew minima per test"
-authors = ["Your Name <you@example.com>"]
+description = "Minimal CrewAI project"
+requires-python = ">=3.10"
 
-[tool.poetry.dependencies]
-python = "^3.13"
+dependencies = [
+    "crewai>=1.0.0"
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
