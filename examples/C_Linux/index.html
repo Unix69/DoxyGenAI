@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C_Linux Documentation</title>
+<link rel="stylesheet" href="template.css">
+<style>
+/* =========================
+   VARIABLES LIGHT/DARK
+========================= */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --header-bg: #f4f4f4;
+  --header-text: #111;
+  --link-color: rgb(45, 111, 197);
+  --btn-download-bg: #4fa3ff;
+  --btn-download-hover: #2c82e0;
+  --btn-github-bg: #24292e;
+  --btn-github-hover: #000;
+  --footer-bg: #111;
+  --footer-text: #f4f4f4;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f4f4f4;
+  --header-bg: #111;
+  --header-text: #f4f4f4;
+  --link-color: #6ea8fe;
+  --btn-download-bg: #2c82e0;
+  --btn-download-hover: #4fa3ff;
+  --btn-github-bg: #444;
+  --btn-github-hover: #24292e;
+  --footer-bg: #222;
+  --footer-text: #f4f4f4;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.section {
+    max-width: 960px;
+    margin: 64px auto;
+    background: var(--header-bg);
+    padding: 32px 48px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+table th {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f0f0f0;
+    color: #111;
+    text-align: left;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+ul {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+code {
+    background: #eee;
+    color: #111;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+
+body.dark-mode table th {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+body.dark-mode code {
+  background: #444;
+  color: #f4f4f4;
+}
+
+
+
+
+
+
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  background: var(--header-bg);
+  color: var(--header-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-title a {
+  font-size: 48px;
+  text-decoration: none;
+  color: var(--header-text);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.header-center {
+  text-align: center;
+  max-width: 400px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.author-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #444;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.author-info a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Documentation links sotto author */
+.documentation-links {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.documentation-links a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-download,
+.btn-github {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-download {
+  background-color: var(--btn-download-bg);
+  color: #fff;
+}
+
+.btn-download:hover {
+  background-color: var(--btn-download-hover);
+  transform: scale(1.05);
+}
+
+.btn-github {
+  background-color: var(--btn-github-bg);
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.btn-github:hover {
+  background-color: var(--btn-github-hover);
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+#custom-footer {
+  width: 100%;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  font-size: 0.9em;
+  padding: 16px 0 12px;
+  border-top: 2px solid #2a2a2a;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1000;
+  transition: background 0.3s, color 0.3s;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <h1 class="project-title">
+      <a href="https://github.com/Unix69/C_Linux" target="_blank">C_Linux</a>
+    </h1>
+    <div class="header-buttons">
+      <a href="https://github.com/Unix69/C_Linux/archive/refs/heads/main.zip"
+         class="btn-download" target="_blank">⬇️ Download</a>
+      <a href="https://github.com/Unix69/C_Linux"
+         class="btn-github" target="_blank">🐙 View on GitHub</a>
+    </div>
+  </div>
+
+  <div class="header-center">
+    <img src="Images/Logo/c-language.svg" alt="C language" width="128" height="128"/>
+  </div>
+
+  <div class="header-right">
+    <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="GitHub Avatar" class="author-avatar">
+    <div class="author-info">
+      <strong>Author</strong>
+      <a href="https://github.com/Unix69" target="_blank">@Unix69</a>
+      <span>Open Source • Linux Enthusiast</span>
+      <div class="documentation-links">
+        <a href="/C_Linux/docs/html/index.html" target="_blank">
+          <img src="Images/Logo/doxygen.svg" alt="Doxygen" width="20" height="20"> Doxygen
+        </a>
+        <a href="/C_Linux/docs/html/md_README.html" target="_blank">
+          <img src="Images/Logo/GitHubLogo.svg" alt="GitHub" width="20" height="20"> README
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="section">
+  <p>
+    <b>C_Linux</b> is an educational collection of C examples for
+    <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a> and
+    <a href="https://en.wikipedia.org/wiki/POSIX" target="_blank">POSIX</a> systems.
+    Covered topics include:
+  </p>
+  <ul>
+    <li>🔤 <b>String Manipulation</b></li>
+    <li>⚙️ <b>Multiprocessing & IPC</b></li>
+    <li>🧵 <b>Multithreading</b></li>
+    <li>📁 <b>Filesystem & I/O</b></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>🧭 Info</h2>
+  <table>
+    <tr><th>Property</th><th>Details</th></tr>
+    <tr><td>Language</td><td>C (<a href="https://en.wikipedia.org/wiki/C99" target="_blank">C99</a>)</td></tr>
+    <tr><td>Target</td><td>All POSIX-compliant systems</td></tr>
+    <tr><td>Difficulty</td><td>Beginner 🟢</td></tr>
+    <tr><td>License</td><td><a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU GPL v3</a></td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>🛠 Tools & Standards</h2>
+  <table>
+    <tr><th>Category</th><th>Technology</th></tr>
+    <tr><td>Compiler</td><td><a href="https://gcc.gnu.org/" target="_blank">GCC</a></td></tr>
+    <tr><td>Build System</td><td><a href="https://www.gnu.org/software/make/" target="_blank">GNU Make</a></td></tr>
+    <tr><td>Documentation</td><td><a href="https://www.doxygen.nl/" target="_blank">Doxygen</a></td></tr>
+    <tr><td>Standards</td><td><a href="https://pubs.opengroup.org/onlinepubs/9699919799/" target="_blank">POSIX</a>, <a href="https://en.cppreference.com/w/c" target="_blank">ISO C</a></td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>🚀 Quick Start</h2>
+  <ol>
+    <li>Clone or download from GitHub</li>
+    <li>Ensure <b>gcc</b> and <b>make</b> are installed</li>
+    <li>Run <code>make</code> in project root</li>
+    <li>Explore generated executables and HTML docs</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>📁 Structure</h2>
+  <div id="directory-tree-container" class="directory-tree"></div>
+</div>
+
+<button id="theme-toggle" style="position:fixed;bottom:20px;right:20px;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;">🌙 Dark Mode</button>
+
+<script src="directory-tree.js"></script>
+<script>
+const btn = document.getElementById('theme-toggle');
+
+function setTheme(dark) {
+  if(dark){
+    document.body.classList.add('dark-mode');
+    btn.textContent = '☀️ Light Mode';
+    btn.style.background = '#444';
+    btn.style.color = '#fff';
+  } else {
+    document.body.classList.remove('dark-mode');
+    btn.textContent = '🌙 Dark Mode';
+    btn.style.background = '#f4f4f4';
+    btn.style.color = '#111';
+  }
+}
+
+// Imposta tema iniziale in base al sistema
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+setTheme(prefersDark);
+
+// Toggle al click
+btn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-mode');
+  setTheme(isDark);
+});
+</script>
+
+
+<div id="custom-footer">
+
+  <!-- Sezione download / GitHub -->
+  <div id="custom-footer-download" class="custom-footer-download">
+    <a href="https://github.com/Unix69/README-Template/archive/refs/heads/main.zip" 
+       class="btn-download" target="_blank">⬇️ Download</a>
+    <a href="https://github.com/Unix69/C_Linux" 
+       class="btn-github" target="_blank">🐙 View on GitHub</a>
+  </div>
+
+  <!-- Sezione autore -->
+  <div id="custom-footer-author" class="custom-footer-author">
+    <img src="Images/Logo/GitHubLogo.svg" alt="GitHub" width="18px" height="18px">
+    &copy; 2025 <b>Giuseppe Pedone</b> —
+    <a href="https://github.com/Unix69" target="_blank"><b>GitHub</b></a>
+  </div>
+
+</div>
+
+</body>
+</html>

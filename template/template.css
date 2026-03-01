@@ -1,0 +1,170 @@
+/* Ridimensionamento logo del progetto */
+#projectlogo img {
+  width: 120px;   /* o una % tipo 20% */
+  height: auto;   /* mantiene le proporzioni */
+}
+
+body, .contents {
+  font-family: "JetBrains Mono", monospace;
+}
+
+a, a:visited {
+  color: rgb(45, 111, 197);
+}
+
+.title {
+  color: #f7ca18;
+}
+
+h1 {
+    margin: 24px 0;
+    font-size: 36px;
+}
+
+h2 {
+    margin: 24px 0;
+    font-size: 30px;
+}
+
+.directory-tree ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+.directory-tree li {
+  margin: 4px 0;
+  cursor: pointer;
+  position: relative;
+}
+.directory-tree li a {
+  text-decoration: none;
+  color: #333;
+}
+.directory-tree li a:hover {
+  color: #1e90ff;
+}
+.directory-tree li ul {
+  display: none;
+}
+.directory-tree li.expanded > ul {
+  display: block;
+}
+.directory-tree li::before {
+  content: "▶";
+  display: inline-block;
+  width: 20px;
+  color: #888;
+  margin-right: 4px;
+  transition: transform 0.2s;
+}
+.directory-tree li.expanded::before {
+  transform: rotate(90deg);
+  color: #1e90ff;
+}
+.directory-tree .file::before {
+  content: attr(data-icon);
+  display: inline-block;
+  width: 20px;
+  margin-right: 4px;
+}
+
+
+  /* --- CUSTOM FOOTER GLOBAL --- */
+#custom-footer {
+  width: 100%;
+  background-color: #111;
+  color: #f8f8f8;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 16px 0 12px 0;
+  border-top: 2px solid #2a2a2a;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+
+.custom-header-download {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+
+/* --- DOWNLOAD + GITHUB BUTTON SECTION --- */
+.custom-footer-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* --- BUTTON STYLES --- */
+.btn-download,
+.btn-github {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Pulsante Download */
+.btn-download {
+  background-color: #4fa3ff;
+  color: #fff;
+}
+.btn-download:hover {
+  background-color: #2c82e0;
+  transform: scale(1.05);
+}
+
+/* Pulsante View on GitHub */
+.btn-github {
+  background-color: #24292e;
+  color: #fff;
+  border: 1px solid #444;
+}
+.btn-github:hover {
+  background-color: #000;
+  transform: scale(1.05);
+}
+
+/* --- AUTHOR SECTION --- */
+.custom-footer-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.custom-footer-author a {
+  color: #4fa3ff;
+  text-decoration: none;
+}
+
+.custom-footer-author a:hover {
+  text-decoration: underline;
+}
+
+.custom-footer-author img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+
+.only-github {
+    display: none;
+}
+
+.only-doxygen {
+    display: inline;
+}
