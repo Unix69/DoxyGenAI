@@ -701,7 +701,7 @@ wheels = [
 ]
 
 [[package]]
-name = "doxygen-ai"
+name = "doxygenai"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
