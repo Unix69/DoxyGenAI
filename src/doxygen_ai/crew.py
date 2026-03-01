@@ -1,8 +1,18 @@
-from crewai import Crew
+from crewai import Crew, Task
 from doxygen_ai.agents.TestAgent import TestAgent
 
 class DoxygenCrew(Crew):
     def __init__(self):
-        super().__init__(agents=[], process="sequential", verbose=True)
-        # Aggiungi l'agente minimale
-        self.add_agent(TestAgent())
+        agent = TestAgent()
+
+        task = Task(
+            description="Test execution",
+            agent=agent
+        )
+
+        super().__init__(
+            agents=[agent],
+            tasks=[task],
+            process="sequential",
+            verbose=True
+        )
