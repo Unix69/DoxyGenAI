@@ -1,13 +1,7 @@
 [project]
 name = "doxygenai"
 version = "0.1.0"
-description = "Minimal CrewAI project"
-requires-python = ">=3.10"
-
-dependencies = [
-    "crewai>=1.0.0"
-]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
