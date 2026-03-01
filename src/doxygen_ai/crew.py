@@ -18,14 +18,13 @@ required_env = ["OPENAI_API_KEY"]
 for var in required_env:
     if not os.getenv(var):
         msg = f"Variabile d'ambiente {var} non impostata!"
-        print(msg)   # comparirà subito nei log runtime su CrewAI.com
+        print(msg)   # comparirà subito nei log runtime
         logger.error(msg)
         raise EnvironmentError(msg)
 
 # Import moduli con gestione errori
 try:
     from crewai import Crew
-    from crewai_enterprise.api.crew_base import CrewBase  # <- import corretto per Enterprise
     from agents.LanguageDetector import LanguageDetector
     logger.info("LanguageDetector importato correttamente")
     print("LanguageDetector importato correttamente")
@@ -44,8 +43,7 @@ except Exception as e:
     logger.exception("Errore durante l'istanza di LanguageDetector")
     raise
 
-# Classe Crew annotata con @CrewBase per Enterprise
-@CrewBase
+# Classe Crew moderna (senza @CrewBase)
 class DoxygenCrew(Crew):
     def __init__(self):
         super().__init__(
