@@ -1,5 +1,5 @@
 from crewai import Crew
-from .agents.TestAgent import TestAgent
+from agents.TestAgent import TestAgent
 
 class DoxygenCrew(Crew):
     def __init__(self):
