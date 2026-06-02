@@ -1,4 +1,0 @@
-test_task:
-  description: "Run test"
-  expected_output: "ok"
-  agent: test_agent

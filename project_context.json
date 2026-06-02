@@ -1,0 +1,20 @@
+{
+  "domain": "educational operating systems",
+  "goal": "teach Linux OS concepts via C programming",
+  "interpretation_mode": "didactic",
+  "output_style": "educational technical documentation",
+
+  "analysis_priorities": [
+    "system calls understanding",
+    "process lifecycle explanation",
+    "signal and IPC behavior",
+    "file system interaction",
+    "threading and concurrency concepts"
+  ],
+
+  "agent_behavior": {
+    "MDTemplateAnalyzer": "must generate educational sections and learning structure",
+    "DocumentationMaker": "must explain concepts step-by-step",
+    "ArchitectureAnalyzer": "must map OS concepts, not just modules"
+  }
+}

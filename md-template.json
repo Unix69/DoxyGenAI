@@ -1,0 +1,363 @@
+{
+  "version": "2.0",
+  "description": "Comprehensive markdown documentation template for software applications and systems with recursive subsections, covering the full software lifecycle",
+
+  "markdown_directory_tree": {
+    "docs": {
+      "introduction": {},
+      "overview": {},
+      "getting_started": {},
+      "architecture": {},
+      "design": {},
+      "implementation": {},
+      "usage": {},
+      "api": {},
+      "testing": {},
+      "deployment": {},
+      "operations": {},
+      "security": {},
+      "performance": {},
+      "contributing": {},
+      "reference": {}
+    }
+  },
+
+  "markdown_files": [
+    {
+      "path": "README.md",
+      "role": "entrypoint",
+      "sections": [
+        {
+          "title": "Project Overview",
+          "level": 1,
+          "description": "High-level introduction, purpose, and scope of the software system or application",
+          "rendering": ["badges", "logo"],
+          "subsections": [
+            {
+              "title": "System Description",
+              "level": 2,
+              "description": "Concise explanation of what the system or application does",
+              "subsections": []
+            },
+            {
+              "title": "Key Features",
+              "level": 2,
+              "rendering": ["list"],
+              "description": "Main functionalities, benefits, and differentiators",
+              "subsections": []
+            },
+            {
+              "title": "Intended Users",
+              "level": 2,
+              "rendering": ["list"],
+              "description": "Target users, roles, or personas",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Technology Stack",
+          "level": 1,
+          "rendering": ["badges", "table", "links"],
+          "description": "Languages, frameworks, libraries, and tools used",
+          "subsections": []
+        },
+        {
+          "title": "Architecture Overview",
+          "level": 1,
+          "rendering": ["diagram"],
+          "description": "High-level system or software architecture diagram",
+          "subsections": []
+        },
+        {
+          "title": "Quick Start",
+          "level": 1,
+          "rendering": ["code"],
+          "description": "Minimal steps to run or deploy the system quickly",
+          "subsections": []
+        },
+        {
+          "title": "Documentation Guide",
+          "level": 1,
+          "rendering": ["links"],
+          "description": "Links to detailed documentation sections",
+          "subsections": []
+        }
+      ]
+    },
+
+    {
+      "path": "docs/overview/system_overview.md",
+      "sections": [
+        {
+          "title": "System Purpose",
+          "level": 1,
+          "description": "Why the system exists and what problems it solves",
+          "subsections": [
+            {
+              "title": "Business Goals",
+              "level": 2,
+              "description": "Objectives from a business perspective",
+              "subsections": []
+            },
+            {
+              "title": "Technical Goals",
+              "level": 2,
+              "description": "Objectives from a technical perspective",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Scope",
+          "level": 1,
+          "description": "Boundaries and limitations of the system or application",
+          "subsections": []
+        },
+        {
+          "title": "Stakeholders",
+          "level": 1,
+          "rendering": ["table"],
+          "description": "Actors, roles, and responsibilities interacting with the system",
+          "subsections": []
+        },
+        {
+          "title": "Use Cases",
+          "level": 1,
+          "rendering": ["list"],
+          "description": "Typical scenarios demonstrating system usage",
+          "subsections": [
+            {
+              "title": "Primary Use Cases",
+              "level": 2,
+              "subsections": []
+            },
+            {
+              "title": "Edge Cases",
+              "level": 2,
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "path": "docs/getting_started/installation.md",
+      "sections": [
+        {
+          "title": "Prerequisites",
+          "level": 1,
+          "rendering": ["list"],
+          "description": "Required software, environment, or dependencies",
+          "subsections": []
+        },
+        {
+          "title": "Installation Steps",
+          "level": 1,
+          "rendering": ["code"],
+          "description": "Step-by-step installation instructions",
+          "subsections": [
+            {
+              "title": "Local Setup",
+              "level": 2,
+              "description": "How to install and run locally",
+              "subsections": []
+            },
+            {
+              "title": "Cloud or Container Setup",
+              "level": 2,
+              "description": "Deploy in cloud or container environments",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Configuration",
+          "level": 1,
+          "rendering": ["table", "code"],
+          "description": "Environment variables, config files, or settings",
+          "subsections": []
+        }
+      ]
+    },
+
+    {
+      "path": "docs/architecture/system_architecture.md",
+      "sections": [
+        {
+          "title": "Architecture Overview",
+          "level": 1,
+          "rendering": ["diagram"],
+          "description": "High-level system architecture and main modules",
+          "subsections": []
+        },
+        {
+          "title": "Component Breakdown",
+          "level": 1,
+          "rendering": ["table"],
+          "description": "Details of each component, module, or service",
+          "subsections": [
+            {
+              "title": "Internal Components",
+              "level": 2,
+              "subsections": []
+            },
+            {
+              "title": "External Integrations",
+              "level": 2,
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Data Flow",
+          "level": 1,
+          "rendering": ["diagram"],
+          "description": "How data moves through the system",
+          "subsections": []
+        },
+        {
+          "title": "Scalability Considerations",
+          "level": 1,
+          "subsections": []
+        }
+      ]
+    },
+
+    {
+      "path": "docs/design/design_decisions.md",
+      "sections": [
+        {
+          "title": "Design Principles",
+          "level": 1,
+          "description": "Guidelines and best practices used in the system design",
+          "subsections": []
+        },
+        {
+          "title": "Architectural Decisions",
+          "level": 1,
+          "rendering": ["list"],
+          "description": "Key design choices and trade-offs",
+          "subsections": [
+            {
+              "title": "Rationale",
+              "level": 2,
+              "subsections": []
+            },
+            {
+              "title": "Impact",
+              "level": 2,
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Design Patterns",
+          "level": 1,
+          "description": "Patterns and reusable solutions applied",
+          "subsections": []
+        }
+      ]
+    },
+
+    {
+      "path": "docs/implementation/code_structure.md",
+      "sections": [
+        {
+          "title": "Project Structure",
+          "level": 1,
+          "rendering": ["code"],
+          "description": "Directory layout and organization",
+          "subsections": []
+        },
+        {
+          "title": "Modules and Components",
+          "level": 1,
+          "rendering": ["table"],
+          "description": "Breakdown of modules and their responsibilities",
+          "subsections": [
+            {
+              "title": "Module Details",
+              "level": 2,
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Core Logic",
+          "level": 1,
+          "rendering": ["code"],
+          "description": "Implementation details for key components",
+          "subsections": []
+        }
+      ]
+    },
+
+    {
+      "path": "docs/usage/usage_guide.md",
+      "sections": [
+        {
+          "title": "Basic Usage",
+          "level": 1,
+          "rendering": ["code"],
+          "description": "Common usage examples",
+          "subsections": []
+        },
+        {
+          "title": "Advanced Usage",
+          "level": 1,
+          "rendering": ["code"],
+          "description": "Advanced scenarios and configurations",
+          "subsections": [
+            {
+              "title": "Customization",
+              "level": 2,
+              "subsections": []
+            },
+            {
+              "title": "Integration",
+              "level": 2,
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "path": "docs/api/api_reference.md",
+      "sections": [
+        {
+          "title": "API Overview",
+          "level": 1,
+          "description": "General API description",
+          "subsections": []
+        },
+        {
+          "title": "Endpoints",
+          "level": 1,
+          "rendering": ["table", "code"],
+          "description": "List of endpoints with request/response examples",
+          "subsections": [
+            {
+              "title": "Authentication Endpoints",
+              "level": 2,
+              "subsections": []
+            },
+            {
+              "title": "Data Endpoints",
+              "level": 2,
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "Authentication and Authorization",
+          "level": 1,
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}
