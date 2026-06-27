@@ -1,2 +1,11 @@
 __pycache__/
 *.pyc
+
+.env
+**/.env
+logs/
+*.log
+
+source/.env
+source/Agents/.env
+source/logs/
